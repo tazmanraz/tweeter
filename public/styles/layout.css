@@ -25,10 +25,37 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
+ /* For Tweet Post creation area */
 .container{
   display: flex;
   width: 100%;
   background-color: #f4eee8;
   padding: 0 5%;
-
  }
+
+ .new-tweet {
+  width:100%
+}
+
+.tweet-post {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  width: 100%;
+  display: block;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.bottom-tweet {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+button {
+  color: #FFF;    
+  background-color: #4056A1;
+  font-family: 'Bungee', cursive;
+}
