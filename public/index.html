@@ -21,7 +21,9 @@
     crossorigin="anonymous" />
 
   <!-- Time Ago Library -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+    integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+    crossorigin="anonymous"></script>
 
   <!-- App CSS -->
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
@@ -71,7 +73,7 @@
 
         <textarea class="tweet-post" name="text" id="tweet-text" placeholder="Write your thoughts here"></textarea>
 
-        
+
 
         <div class="bottom-tweet">
           <button type="submit">Tweet</button>
@@ -81,31 +83,8 @@
       </form>
     </section>
 
-    <section id="tweet-container">
-      <article class="tweet">
-        <header>
-          <div class="tweet-header">
-          <div>
-            <i class="fas fa-user-ninja"></i>
-            <span>Ryu Hayabusa</span>
-          </div>
-            <span>@ngaiden</span>
-          </div>
-          <p class="tweet-message">I am a ninja</p>
-          <hr>
-        </header>
-
-        <footer class="tweet-footer">
-
-          <span class="need_to_be_rendered" datetime="2021-04-19T09:24:17Z"></span>
-
-          <div class="footer-icons">
-          <i class="fas fa-flag"></i>
-          <i class="fas fa-retweet"></i>
-          <i class="fas fa-heart"></i>
-        </div>
-        </footer>
-      </article>
+    <!-- This section is referenced on client.js -->
+    <section id="tweets-container">
     </section>
 
   </main>
