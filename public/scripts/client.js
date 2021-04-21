@@ -9,7 +9,22 @@ $(document).ready(function() {
 
   // Submitting Tweets from form submission
   $('form').on('submit', function(event) {
-    event.preventDefault();
+    event.preventDefault()
+
+    let charCount =  $('.tweet-post').val().length;
+    
+    // If statements checking for validation
+    if (charCount === 0) {
+      alert("u dun goofed");
+      $('.validation-text').text('Cannot send an empty tweet.').css('color', 'red');
+    }
+    else if (charCount > 140) {
+      alert("u dun goofed");
+      $('.validation-text').text('Please use less than 140 characters').css('color', 'red');
+    } else {
+
+      $('.validation-text').css('color', 'black')
+    
     $.ajax({
       url:"/tweets",
       method:"POST",
@@ -19,6 +34,7 @@ $(document).ready(function() {
     }).catch(function(error){
       console.error(error);
     })
+  }
   })
   
   // Function to create tweets
