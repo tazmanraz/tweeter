@@ -1,6 +1,6 @@
 /* CSS for header where user info is shown */
 
-header {
+.user-display {
   display: flex;
   height: 400px;
   background-color: #f5cebe;
