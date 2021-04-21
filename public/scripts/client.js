@@ -5,21 +5,22 @@
  */
 
 
-$(document).ready(function () {
+$(document).ready(function() {
 
+  // Submitting Tweets from form submission
   $('form').on('submit', function(event) {
     event.preventDefault();
-    console.log($('form').serialize());
     $.ajax({
       url:"/tweets",
       method:"POST",
       data: $('form').serialize()
-    }).then(function(response){
+    }).then(function(response) {
       console.log(response)
+    }).catch(function(error){
+      console.error(error);
     })
-    })
+  })
   
-
   // Function to create tweets
   const createTweetElement = function (tweetObject) {
     const $tweet = $(`<article class="tweet">
@@ -57,6 +58,17 @@ $(document).ready(function () {
     }
   }
 
-  // renderTweets(data);
+  // Loading tweets
+  const loadTweets = function() {
+    $
+    .ajax('/tweets')
+    .then(function(tweets) {
+      renderTweets(tweets);
+    }).catch(function(error) {
+      console.error(error);
+    })
+  }
+
+  loadTweets();
 
 });
