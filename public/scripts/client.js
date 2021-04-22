@@ -13,7 +13,7 @@ $(document).ready(function() {
 
     let charCount =  $('.tweet-post').val().length;
     
-    // If statements checking for validation
+    // If statements checking for valid post submissions
     if (charCount === 0) {
       alert("u dun goofed");
       $('.validation-text').text('Cannot send an empty tweet.').css('color', 'red');
@@ -28,9 +28,13 @@ $(document).ready(function() {
     $.ajax({
       url:"/tweets",
       method:"POST",
-      data: $('form').serialize()
+      data: $('form').serialize() // should work with event.target.value - Test later for interest
+    
+    // Adding to page
     }).then(function(response) {
-      console.log(response)
+      $('.counter').val(140);
+      $('.tweet-post').val('');
+      loadTweets();
     }).catch(function(error){
       console.error(error);
     })
@@ -70,7 +74,7 @@ $(document).ready(function() {
   //Renders all tweets from database using createTweetElement
   const renderTweets = function(tweets) {
     for (const tweet of tweets) {
-      $('#tweets-container').append(createTweetElement(tweet));
+      $('#tweets-container').prepend(createTweetElement(tweet));
     }
   }
 
