@@ -7,6 +7,13 @@
 
 $(document).ready(function() {
 
+  // Cross Site Scripting - NOT FINISHED
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   // Submitting Tweets from form submission
   $('form').on('submit', function(event) {
     event.preventDefault()
@@ -15,16 +22,27 @@ $(document).ready(function() {
     
     // If statements checking for valid post submissions
     if (charCount === 0) {
-      alert("u dun goofed");
-      $('.validation-text').text('Cannot send an empty tweet.').css('color', 'red');
-    }
-    else if (charCount > 140) {
-      alert("u dun goofed");
-      $('.validation-text').text('Please use less than 140 characters').css('color', 'red');
+      $('.validation-text').slideUp();
+
+      $('.validation-text').html('Cannot send an empty tweet.')
+      .css('color', 'red')
+
+      .slideDown(500);
+      //return false;
+    } else if (charCount > 140) {
+      $('.validation-text').slideUp();
+      $('.validation-text')
+      .html('Please use less than 140 characters')
+      .css('color', 'red')
+
+      .slideDown(500);
+
     } else {
 
-      $('.validation-text').css('color', 'black')
+      $('.validation-text').css('color', 'black').slideUp();
     
+      // $('.validation-text').slideUp(500, function() { $(this).remove()})
+
     $.ajax({
       url:"/tweets",
       method:"POST",
@@ -35,8 +53,9 @@ $(document).ready(function() {
       $('.counter').val(140);
       $('.tweet-post').val('');
       loadTweets();
+      //console.log(loadTweets())
     }).catch(function(error){
-      console.error(error);
+      //console.error(error);
     })
   }
   })
@@ -52,11 +71,11 @@ $(document).ready(function() {
       </div>
       <span>${tweetObject.user.handle}</span>
     </div>
-    <p class="tweet-message">${tweetObject.content.text}</p>
+    <p class="tweet-message">${escape(tweetObject.content.text)}</p>
     <hr>
   </header>
-
-  <footer class="tweet-footer">
+  
+  </div>  <footer class="tweet-footer">
 
     <span>${timeago.format(tweetObject.created_at)}</span>
 
@@ -73,6 +92,7 @@ $(document).ready(function() {
 
   //Renders all tweets from database using createTweetElement
   const renderTweets = function(tweets) {
+    $('#tweets-container').empty();
     for (const tweet of tweets) {
       $('#tweets-container').prepend(createTweetElement(tweet));
     }
@@ -85,7 +105,7 @@ $(document).ready(function() {
     .then(function(tweets) {
       renderTweets(tweets);
     }).catch(function(error) {
-      console.error(error);
+      //console.error(error);
     })
   }
 

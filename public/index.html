@@ -64,11 +64,11 @@
   <main class="container">
     <section class="new-tweet">
 
-      <h2>Compose Tweet</h2>
+      <h2 class="validation-text"></h2>
 
       <!-- Submitted form sent to /tweets -->
       <form method="POST" action="/tweets">
-        <label class="validation-text" for="tweet-text">What are you humming about?</label>
+        <label for="tweet-text">What are you humming about?</label>
         <br>
         <textarea class="tweet-post" name="text" id="tweet-text" placeholder="Write your thoughts here"></textarea>
 
