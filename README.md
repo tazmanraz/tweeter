@@ -4,8 +4,8 @@ Tweeter is a simple, single-page Twitter clone. I worked on the front end using 
 
 ## Final Product
 
-!["Screenshot of error tweet"](https://github.com/tazmanraz/tinyapp/blob/master/docs/pic1.PNG)
-!["Screenshot of responsivity"](https://github.com/tazmanraz/tinyapp/blob/master/docs/pic2.PNG)
+!["Screenshot of error tweet"](https://github.com/tazmanraz/tweeter/blob/master/docs/pic1.PNG)
+!["Screenshot of responsivity"](https://github.com/tazmanraz/tweeter/blob/master/docs/pic2.PNG)
 
 ## Dependencies
 
