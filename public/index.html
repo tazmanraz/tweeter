@@ -30,6 +30,12 @@
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
 
+  <!-- THESE STYLESHEETS WILL BE UNCOMMENTED WHEN layout.css IS CLEANED UP -->
+
+  <!-- <link rel="stylesheet" href="/styles/create-tweet.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/tweet-layout.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/media-queries.css" type="text/css" /> -->
+
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
@@ -50,41 +56,43 @@
     </div>
   </nav>
 
-  <header class="user-display">
-    <div>
-      <img src="/images/profile-hex.png">
-    </div>
-    <br>
-    <div>
-      <h2>Herp Derp</h2>
-    </div>
-  </header>
+  <div class="flex-divider">
+    <header class="user-display">
+      <div>
+        <img src="/images/profile-hex.png">
+      </div>
+      <br>
+      <div>
+        <h2>Sarah Connor</h2>
+      </div>
+    </header>
 
-  <!-- Page-specific (main) content here -->
-  <main class="container">
-    <section class="new-tweet">
+    <!-- Page-specific (main) content here -->
+    <main class="container">
+      <section class="new-tweet">
 
-      <h2 class="validation-text"></h2>
+        <h4 class="validation-text"></h2>
 
-      <!-- Submitted form sent to /tweets -->
-      <form method="POST" action="/tweets">
-        <label for="tweet-text">What are you humming about?</label>
-        <br>
-        <textarea class="tweet-post" name="text" id="tweet-text" placeholder="Write your thoughts here"></textarea>
+        <!-- Submitted form sent to /tweets -->
+        <form method="POST" action="/tweets">
+          <label for="tweet-text">What are you humming about?</label>
+          <br>
+          <textarea class="tweet-post" name="text" id="tweet-text" placeholder="Write your thoughts here"></textarea>
 
-        <div class="bottom-tweet">
-          <button type="submit">Tweet</button>
-          <output name="counter" class="counter" for="tweet-text">140</output>
-        </div>
+          <div class="bottom-tweet">
+            <button type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
 
-      </form>
-    </section>
+        </form>
+      </section>
 
-    <!-- This section is referenced on client.js -->
-    <section id="tweets-container">
-    </section>
+      <!-- This section is referenced on client.js -->
+      <section id="tweets-container">
+      </section>
 
-  </main>
+    </main>
+  </div>
 </body>
 
 </html>
