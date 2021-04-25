@@ -20,7 +20,11 @@ Tweeter is a simple, single-page Twitter clone. I worked on the front end using 
 - Install all dependencies (using the `npm install` command).
 - Run the development web server using the `node express_server.js` command.
 
+<<<<<<< HEAD
 ## Notes, Bug Fixes, and Features to Implement
+=======
+## Bug Fixes, Features to Work On, and Notes
+>>>>>>> 12f6d9a493a71d52ddcc7fc8a9565ed4c991b5d1
 
 - ES5 formatting was consistently used so arrow functions were avoided. This is because I couldn't get one of the jQuery functions working with arrow functions.
 - Working on a desktop+ dimensions on media queries. A max width needs to be specified. I can't imagine this page looking pretty on a widescreen TV.
