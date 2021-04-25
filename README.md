@@ -21,9 +21,9 @@ Tweeter is a simple, single-page Twitter clone. I worked on the front end using 
 - Run the development web server using the `npm run` command to start the server.
 - Interact with Tweeter by going to [http://localhost:8080/](http://localhost:8080/) in your browser.
 
-## Notes, Bug Fixes, and Features to Implement
+## Notes
 
 - ES5 formatting was consistently used so arrow functions were avoided. This is because I couldn't get one of the jQuery functions working with arrow functions.
-- Working on a desktop+ dimensions on media queries. A max width needs to be specified. I can't imagine this page looking pretty on a widescreen TV.
-- The stretch components of leading to top of page (should be able to do by referencing local hrefs) and a toggle for the textarea.
+- Figuring out a desktop+ dimensions on media queries. A max width needs to be specified. I can't imagine this page looking pretty on a widescreen TV.
+- The stretch components of linking to top of page (should be able to do by referencing local hrefs) and a toggle for the textarea need to be worked on still.
 
