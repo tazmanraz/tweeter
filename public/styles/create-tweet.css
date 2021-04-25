@@ -1,4 +1,4 @@
-/* Reserved for create tweet component from layout.css */
+/* For create tweet component from layout.css */
 
 .container{
   display: flex;
@@ -24,6 +24,7 @@
 
   border-bottom: 2px solid black;
   padding: 20px;
+  resize: none;
 }
 
 .bottom-tweet {
@@ -37,4 +38,12 @@
 button {
   color: #FFF;    
   background-color: #4056A1;
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+  width: 100%;
+  padding: 1em;
+  border: 4px solid red;
 }

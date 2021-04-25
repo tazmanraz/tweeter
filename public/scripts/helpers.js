@@ -65,19 +65,20 @@ const tweetCharError = function(chars) {
     // Sliding up in case back to back errors
     $('.validation-text').slideUp();
 
-    // CSS hardcoded in here. Use jQuery addClass/removeClass features and put in stylesheet
-    // To add boxes and a more elegant looking error message.
-    $('.validation-text').html('🛑 CANNOT SEND AN EMPTY TWEET 🛑')
-      .css('color', 'red')
+    $('.validation-text')
+      .html('🛑 CANNOT SEND AN EMPTY TWEET 🛑')
+      .addClass('error-message')
       .slideDown(500);
+      
     return true;
   } else if (chars > 140) {
     $('.validation-text').slideUp();
 
     $('.validation-text')
       .html('🛑 SEND LESS THAN 140 CHARACTERS 🛑')
-      .css('color', 'red')
+      .addClass('error-message')
       .slideDown(500);
+    
     return true;
   }
   return false;
