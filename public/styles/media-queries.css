@@ -1,1 +1,32 @@
 /* Reserved for media-queries from layout.css */
+
+
+@media only screen and (min-width: 768px) {
+  
+  .flex-divider {
+    background-color: #f4eee8;
+    padding: 8em 2.5em 2em;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .new-tweet {
+    margin: auto;
+  }
+  .tweet{
+    height: auto;
+  }
+
+}
+
+/* Reserved for Desktop layout feature */
+@media only screen and (min-width: 1024px) {
+
+  /* .flex-divider {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 1024px;
+  } */
+
+}

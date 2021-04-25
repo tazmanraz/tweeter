@@ -20,11 +20,9 @@ Tweeter is a simple, single-page Twitter clone. I worked on the front end using 
 - Install all dependencies (using the `npm install` command).
 - Run the development web server using the `node express_server.js` command.
 
-## Bug Fixes, Features to Work on, and Notes
+## Notes, Bug Fixes, and Features to Implement
 
 - ES5 formatting was consistently used so arrow functions were avoided. This is because I couldn't get one of the jQuery functions working with arrow functions.
-- Currently working on separating my CSS so it's not one long stylesheet on layout.css. Order matters when certain CSS are called so I have to be careful when refactoring this.
-- The client.js could be cleaned up by moving the helper functions to a separate file. For best practises, the client.js file should only have its primary function in there.
 - Working on a desktop+ dimensions on media queries. A max width needs to be specified. I can't imagine this page looking pretty on a widescreen TV.
 - Need to figure out a way to lock the textbox. Currently users can manipulate the size of it.
 - Some minor tweaks and adjustments required to make things look nicer such as: user display header, fonts, nicer looking error messages.

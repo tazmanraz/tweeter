@@ -1,1 +1,40 @@
 /* Reserved for create tweet component from layout.css */
+
+.container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #f4eee8;
+  padding: 0 5%;
+ }
+
+ .new-tweet {
+  width:100%
+}
+
+.tweet-post {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  width: 100%;
+  display: block;
+  min-width: 100%;
+  min-height: 100%;
+
+  border-bottom: 2px solid black;
+  padding: 20px;
+}
+
+.bottom-tweet {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: 'Bungee', cursive;
+}
+
+button {
+  color: #FFF;    
+  background-color: #4056A1;
+}
